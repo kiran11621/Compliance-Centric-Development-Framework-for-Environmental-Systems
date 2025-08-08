@@ -1,0 +1,75 @@
+{
+  "agency": "World Health Organization (WHO)",
+  "jurisdiction": "Global",
+  "source_document": "WHO Global Air Quality Guidelines 2021",
+  "standards": {
+    "air_quality": [
+      {
+        "parameter_name": "Particulate Matter 2.5",
+        "parameter_id": "PM2_5",
+        "unit": "µg/m³",
+        "levels": [
+          { "level_name": "AQG Level", "averaging_time": "Annual", "value": 5 },
+          { "level_name": "AQG Level", "averaging_time": "24 hours", "value": 15 }
+        ]
+      },
+      {
+        "parameter_name": "Particulate Matter 10",
+        "parameter_id": "PM10",
+        "unit": "µg/m³",
+        "levels": [
+          { "level_name": "AQG Level", "averaging_time": "Annual", "value": 15 },
+          { "level_name": "AQG Level", "averaging_time": "24 hours", "value": 45 }
+        ]
+      },
+      {
+        "parameter_name": "Ozone",
+        "parameter_id": "O3",
+        "unit": "µg/m³",
+        "levels": [
+          { "level_name": "AQG Level", "averaging_time": "Peak season", "value": 60 },
+          { "level_name": "AQG Level", "averaging_time": "8 hours", "value": 100 }
+        ]
+      },
+      {
+        "parameter_name": "Nitrogen Dioxide",
+        "parameter_id": "NO2",
+        "unit": "µg/m³",
+        "levels": [
+          { "level_name": "AQG Level", "averaging_time": "Annual", "value": 10 },
+          { "level_name": "AQG Level", "averaging_time": "24 hours", "value": 25 }
+        ]
+      },
+      {
+        "parameter_name": "Sulphur Dioxide",
+        "parameter_id": "SO2",
+        "unit": "µg/m³",
+        "levels": [
+          { "level_name": "AQG Level", "averaging_time": "24 hours", "value": 40 }
+        ]
+      },
+      {
+        "parameter_name": "Carbon Monoxide",
+        "parameter_id": "CO",
+        "unit": "µg/m³",
+        "levels": [
+          { "level_name": "AQG Level", "averaging_time": "24 hours", "value": 4000 }
+        ]
+      },
+      {
+        "parameter_name": "Lead",
+        "parameter_id": "PB",
+        "unit": "µg/m³",
+        "levels": [],
+        "remarks": "WHO addresses lead exposure through other vectors (water, paint). Airborne lead is managed as a localized pollutant, not in the primary global AQGs since the phase-out of leaded gasoline."
+      },
+      {
+        "parameter_name": "Ammonia",
+        "parameter_id": "NH3",
+        "unit": "µg/m³",
+        "levels": [],
+        "remarks": "WHO recognizes Ammonia as a key precursor to PM2.5 but does not set a direct guideline for it. It is controlled by managing PM2.5 levels."
+      }
+    ]
+  }
+}

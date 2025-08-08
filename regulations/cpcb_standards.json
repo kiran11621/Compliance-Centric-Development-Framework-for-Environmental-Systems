@@ -1,0 +1,121 @@
+{
+  "agency": "Central Pollution Control Board (CPCB)",
+  "jurisdiction": "India",
+  "source_document": "National Air Quality Index (AQI)",
+  "standards": {
+    "air_quality": [
+      {
+        "parameter_name": "Particulate Matter 10",
+        "parameter_id": "PM10",
+        "unit": "µg/m³",
+        "averaging_time": "24 hours",
+        "aqi_categories": [
+          { "category": "Good", "min": 0, "max": 50 },
+          { "category": "Satisfactory", "min": 51, "max": 100 },
+          { "category": "Moderate", "min": 101, "max": 250 },
+          { "category": "Poor", "min": 251, "max": 350 },
+          { "category": "Very Poor", "min": 351, "max": 430 },
+          { "category": "Severe", "min": 431, "max": 1000 }
+        ]
+      },
+      {
+        "parameter_name": "Particulate Matter 2.5",
+        "parameter_id": "PM2_5",
+        "unit": "µg/m³",
+        "averaging_time": "24 hours",
+        "aqi_categories": [
+          { "category": "Good", "min": 0, "max": 30 },
+          { "category": "Satisfactory", "min": 31, "max": 60 },
+          { "category": "Moderate", "min": 61, "max": 90 },
+          { "category": "Poor", "min": 91, "max": 120 },
+          { "category": "Very Poor", "min": 121, "max": 250 },
+          { "category": "Severe", "min": 251, "max": 1000 }
+        ]
+      },
+      {
+        "parameter_name": "Nitrogen Dioxide",
+        "parameter_id": "NO2",
+        "unit": "µg/m³",
+        "averaging_time": "24 hours",
+        "aqi_categories": [
+          { "category": "Good", "min": 0, "max": 40 },
+          { "category": "Satisfactory", "min": 41, "max": 80 },
+          { "category": "Moderate", "min": 81, "max": 180 },
+          { "category": "Poor", "min": 181, "max": 280 },
+          { "category": "Very Poor", "min": 281, "max": 400 },
+          { "category": "Severe", "min": 401, "max": 1000 }
+        ]
+      },
+      {
+        "parameter_name": "Ozone",
+        "parameter_id": "O3",
+        "unit": "µg/m³",
+        "averaging_time": "8 hours",
+        "aqi_categories": [
+          { "category": "Good", "min": 0, "max": 50 },
+          { "category": "Satisfactory", "min": 51, "max": 100 },
+          { "category": "Moderate", "min": 101, "max": 168 },
+          { "category": "Poor", "min": 169, "max": 208 },
+          { "category": "Very Poor", "min": 209, "max": 748 },
+          { "category": "Severe", "min": 749, "max": 1000 }
+        ]
+      },
+      {
+        "parameter_name": "Carbon Monoxide",
+        "parameter_id": "CO",
+        "unit": "mg/m³",
+        "averaging_time": "8 hours",
+        "aqi_categories": [
+          { "category": "Good", "min": 0.0, "max": 1.0 },
+          { "category": "Satisfactory", "min": 1.1, "max": 2.0 },
+          { "category": "Moderate", "min": 2.1, "max": 10.0 },
+          { "category": "Poor", "min": 10.1, "max": 17.0 },
+          { "category": "Very Poor", "min": 17.1, "max": 34.0 },
+          { "category": "Severe", "min": 34.1, "max": 50.0 }
+        ]
+      },
+      {
+        "parameter_name": "Sulphur Dioxide",
+        "parameter_id": "SO2",
+        "unit": "µg/m³",
+        "averaging_time": "24 hours",
+        "aqi_categories": [
+          { "category": "Good", "min": 0, "max": 40 },
+          { "category": "Satisfactory", "min": 41, "max": 80 },
+          { "category": "Moderate", "min": 81, "max": 380 },
+          { "category": "Poor", "min": 381, "max": 800 },
+          { "category": "Very Poor", "min": 801, "max": 1600 },
+          { "category": "Severe", "min": 1601, "max": 2000 }
+        ]
+      },
+      {
+        "parameter_name": "Ammonia",
+        "parameter_id": "NH3",
+        "unit": "µg/m³",
+        "averaging_time": "24 hours",
+        "aqi_categories": [
+          { "category": "Good", "min": 0, "max": 200 },
+          { "category": "Satisfactory", "min": 201, "max": 400 },
+          { "category": "Moderate", "min": 401, "max": 800 },
+          { "category": "Poor", "min": 801, "max": 1200 },
+          { "category": "Very Poor", "min": 1201, "max": 1800 },
+          { "category": "Severe", "min": 1801, "max": 2500 }
+        ]
+      },
+      {
+        "parameter_name": "Lead",
+        "parameter_id": "PB",
+        "unit": "µg/m³",
+        "averaging_time": "24 hours",
+        "aqi_categories": [
+          { "category": "Good", "min": 0.0, "max": 0.5 },
+          { "category": "Satisfactory", "min": 0.6, "max": 1.0 },
+          { "category": "Moderate", "min": 1.1, "max": 2.0 },
+          { "category": "Poor", "min": 2.1, "max": 3.0 },
+          { "category": "Very Poor", "min": 3.1, "max": 3.5 },
+          { "category": "Severe", "min": 3.6, "max": 5.0 }
+        ]
+      }
+    ]
+  }
+}

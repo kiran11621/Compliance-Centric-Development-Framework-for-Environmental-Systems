@@ -1,0 +1,63 @@
+{
+  "agency": "United States Environmental Protection Agency (EPA)",
+  "jurisdiction": "USA",
+  "source_document": "National Ambient Air Quality Standards (NAAQS)",
+  "standards": {
+    "air_quality": [
+      {
+        "parameter_name": "Carbon Monoxide",
+        "parameter_id": "CO",
+        "naaqs_standards": [
+          { "type": "Primary", "level": "9", "unit": "ppm", "averaging_time": "8 hours", "form": "Not to be exceeded more than once per year" },
+          { "type": "Primary", "level": "35", "unit": "ppm", "averaging_time": "1 hour", "form": "Not to be exceeded more than once per year" }
+        ]
+      },
+      {
+        "parameter_name": "Lead",
+        "parameter_id": "PB",
+        "naaqs_standards": [
+          { "type": "Primary and Secondary", "level": "0.15", "unit": "µg/m³", "averaging_time": "Rolling 3-month average", "form": "Not to be exceeded" }
+        ]
+      },
+      {
+        "parameter_name": "Nitrogen Dioxide",
+        "parameter_id": "NO2",
+        "naaqs_standards": [
+          { "type": "Primary", "level": "100", "unit": "ppb", "averaging_time": "1 hour", "form": "98th percentile of 1-hour daily maximum concentrations, averaged over 3 years" },
+          { "type": "Primary and Secondary", "level": "53", "unit": "ppb", "averaging_time": "1 year", "form": "Annual Mean" }
+        ]
+      },
+      {
+        "parameter_name": "Ozone",
+        "parameter_id": "O3",
+        "naaqs_standards": [
+          { "type": "Primary and Secondary", "level": "0.070", "unit": "ppm", "averaging_time": "8 hours", "form": "Annual fourth-highest daily maximum 8-hour concentration, averaged over 3 years" }
+        ]
+      },
+      {
+        "parameter_name": "Particulate Matter 2.5",
+        "parameter_id": "PM2_5",
+        "naaqs_standards": [
+          { "type": "Primary", "level": "9.0", "unit": "µg/m³", "averaging_time": "1 year", "form": "Annual mean, averaged over 3 years" },
+          { "type": "Secondary", "level": "15.0", "unit": "µg/m³", "averaging_time": "1 year", "form": "Annual mean, averaged over 3 years" },
+          { "type": "Primary and Secondary", "level": "35", "unit": "µg/m³", "averaging_time": "24 hours", "form": "98th percentile, averaged over 3 years" }
+        ]
+      },
+      {
+        "parameter_name": "Particulate Matter 10",
+        "parameter_id": "PM10",
+        "naaqs_standards": [
+          { "type": "Primary and Secondary", "level": "150", "unit": "µg/m³", "averaging_time": "24 hours", "form": "Not to be exceeded more than once per year on average over 3 years" }
+        ]
+      },
+      {
+        "parameter_name": "Sulfur Dioxide",
+        "parameter_id": "SO2",
+        "naaqs_standards": [
+          { "type": "Primary", "level": "75", "unit": "ppb", "averaging_time": "1 hour", "form": "99th percentile of 1-hour daily maximum concentrations, averaged over 3 years" },
+          { "type": "Secondary", "level": "0.5", "unit": "ppm", "averaging_time": "3 hours", "form": "Not to be exceeded more than once per year" }
+        ]
+      }
+    ]
+  }
+}
