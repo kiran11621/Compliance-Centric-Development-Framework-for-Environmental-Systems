@@ -51,6 +51,7 @@
         border-radius: 5px;
         border-left: 5px solid #3498db;
         margin-top: 20px;
+        white-space: pre-wrap;
       }
       .section {
         margin-bottom: 30px;
@@ -93,27 +94,48 @@
       </div>
 
       <div class="section">
-        <h2>Executive Summary</h2>
+        <h2>AI-Powered Analysis</h2>
         <div class="summary">
-          <p>{{ final_report.llm_summary | replace('\n', '<br />') | safe }}</p>
+          <p>{{ final_report.llm_summary | safe }}</p>
         </div>
       </div>
 
+      <!-- NEW SECTION for Model Performance -->
       <div class="section">
-        <h2>Audit Details</h2>
+        <h2>Model Performance Evaluation</h2>
         <table>
           <tr>
-            <th>Audited File</th>
-            <td>{{ final_report.audited_file }}</td>
+            <th>Model Accuracy</th>
+            <td>
+              {{ "%.2f"|format(final_report.performance_report.accuracy * 100)
+              }}%
+            </td>
           </tr>
-          <tr>
-            <th>Regulatory Standard</th>
-            <td>{{ final_report.agency }}</td>
-          </tr>
-          <tr>
-            <th>Audit Timestamp</th>
-            <td>{{ timestamp }}</td>
-          </tr>
+        </table>
+        <h3>Classification Report</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Precision</th>
+              <th>Recall</th>
+              <th>F1-Score</th>
+              <th>Support</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for class, metrics in
+            final_report.performance_report.classification_report.items() %} {%
+            if class in ['0', '1', 'macro avg', 'weighted avg'] %}
+            <tr>
+              <td>{{ class }}</td>
+              <td>{{ "%.2f"|format(metrics.precision) }}</td>
+              <td>{{ "%.2f"|format(metrics.recall) }}</td>
+              <td>{{ "%.2f"|format(metrics['f1-score']) }}</td>
+              <td>{{ metrics.support }}</td>
+            </tr>
+            {% endif %} {% endfor %}
+          </tbody>
         </table>
       </div>
 
@@ -178,8 +200,8 @@
         <h2>Explainability Visuals</h2>
         <h3>Global Feature Importance (SHAP)</h3>
         <p>
-          This chart shows which pollutants had the most impact on the
-          compliance classification. Longer bars indicate higher importance.
+          This chart shows which pollutants had the most impact on the model's
+          predictions. Longer bars indicate higher importance.
         </p>
         <div class="img-container">
           <img
