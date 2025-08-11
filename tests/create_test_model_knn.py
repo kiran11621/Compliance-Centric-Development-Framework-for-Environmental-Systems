@@ -17,17 +17,17 @@ def create_and_save_knn_model(
 
     # 1. Generate a larger, more realistic dataset with 50 records
     np.random.seed(42) # for reproducibility
-    num_records = 100
+    num_records = 50
     data = {
-        'PM2_5': np.random.uniform(10, 300, num_records),
-        'PM10': np.random.uniform(20, 500, num_records),
-        'NO2': np.random.uniform(10, 450, num_records),
-        'O3': np.random.uniform(20, 800, num_records),
-        'CO': np.random.uniform(0.5, 40, num_records),
-        'SO2': np.random.uniform(10, 1800, num_records),
-        'NH3': np.random.uniform(100, 2000, num_records),
-        'PB': np.random.uniform(0.1, 4.0, num_records),
-        'Temperature': np.random.uniform(20, 35, num_records)
+        'PM2_5': np.random.uniform(10, 300, num_records).round(2),
+        'PM10': np.random.uniform(20, 500, num_records).round(2),
+        'NO2': np.random.uniform(10, 450, num_records).round(2),
+        'O3': np.random.uniform(20, 800, num_records).round(2),
+        'CO': np.random.uniform(0.5, 40, num_records).round(2),
+        'SO2': np.random.uniform(10, 1800, num_records).round(2),
+        'NH3': np.random.uniform(100, 2000, num_records).round(2),
+        'PB': np.random.uniform(0.1, 4.0, num_records).round(2),
+        'Temperature': np.random.uniform(20, 35, num_records).round(2)
     }
     df = pd.DataFrame(data)
     
@@ -39,9 +39,7 @@ def create_and_save_knn_model(
     print(f"New 50-record dataset with ground truth saved to: '{data_output_path}'")
 
     # 2. Train the intentionally non-compliant model
-    # --- INTENTIONAL NON-COMPLIANCE ---
     # This model is trained on only a small subset of the required features.
-    # A proper audit should flag this model for missing critical pollutants.
     non_compliant_features = ['Temperature', 'CO', 'O3']
     target = 'PM2_5_High'
 

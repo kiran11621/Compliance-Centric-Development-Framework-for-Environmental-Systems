@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compliance Audit Report</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+      .container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      h1,
+      h2,
+      h3 {
+        color: #2c3e50;
+        border-bottom: 2px solid #e9ecef;
+        padding-bottom: 10px;
+        margin-top: 30px;
+      }
+      .header {
+        text-align: center;
+        padding: 20px;
+        border-radius: 8px 8px 0 0;
+        background-color: #34495e;
+        color: white;
+      }
+      .grade {
+        font-size: 4em;
+        font-weight: bold;
+        margin: 0;
+      }
+      .score {
+        font-size: 1.5em;
+        margin: 0;
+      }
+      .summary {
+        background-color: #ecf0f1;
+        padding: 15px;
+        border-radius: 5px;
+        border-left: 5px solid #3498db;
+        margin-top: 20px;
+        white-space: pre-wrap;
+      }
+      .section {
+        margin-bottom: 30px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+      th,
+      td {
+        border: 1px solid #dee2e6;
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .img-container {
+        text-align: center;
+        margin-top: 20px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Compliance Audit Report</h1>
+        <p class="grade">F</p>
+        <p class="score">
+          Final Weighted Score: 41.20%
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>AI-Powered Analysis</h2>
+        <div class="summary">
+          <p><h1>In-Depth Analysis of AI Audit Report</h1>
+<p>This report analyzes an AI audit with a failing grade ("F"), revealing critical compliance and performance issues.</p>
+<p><strong>1. Overall Assessment:</strong></p>
+<p>The audit resulted in a failing grade of "F" with an overall score of 41.20%. This low score is primarily driven by a significantly low compliance score (22.00%) despite successful dataset validation and model performance reporting.  The model's accuracy, while seemingly acceptable at 76%, is deceptive given the poor compliance performance and imbalanced classification metrics.</p>
+<p><strong>2. Data Validation (Validation Report):</strong></p>
+<ul>
+<li><strong>Status:</strong> SUCCESS</li>
+<li><strong>Analysis:</strong> The dataset validation passed, confirming the presence of all required features ("PM10", "PM2_5", "NO2", "O3", "CO", "SO2", "NH3", "PB") from the <code>cpcb_standards</code> agency.  The presence of extra features ("PM2_5_High", "Temperature") doesn't automatically invalidate the dataset but may require further investigation regarding their relevance and potential bias influence.  No schema errors were detected.  This section highlights the dataset's structural integrity but does not guarantee the data's quality or compliance with the regulations.</li>
+</ul>
+<p><strong>3. Compliance Checking (Compliance Report):</strong></p>
+<ul>
+<li><strong>Status:</strong> SUCCESS</li>
+<li><strong>Analysis:</strong>  This section is critical. While it reports a "SUCCESS" status, the compliance score is abysmally low at 22.00%. This indicates a severe failure to meet the required compliance standards defined by the <code>cpcb_standards</code> agency. The category distribution shows a massive skew towards "Very Poor", "Poor", and "Severe" classifications, suggesting a systemic issue in the data or model's predictions. This low compliance score is the primary driver of the overall failing grade.  The success status here is misleading and needs immediate clarification.</li>
+</ul>
+<p><strong>4. Model Performance (Model Performance Report):</strong></p>
+<ul>
+<li><strong>Status:</strong> SUCCESS</li>
+<li><strong>Analysis:</strong> The model achieved an accuracy of 0.76, which, on the surface, seems reasonable. However, a closer look at the classification report reveals a significant class imbalance and performance disparity between classes. The model performs substantially better for class "1" (recall of 0.97) than class "0" (recall of only 0.35). This suggests potential bias, where the model is much better at identifying one class of pollution than another. This imbalance severely impacts the overall model's reliability and its ability to accurately predict across different pollution levels.  The F1-score for class 0 is particularly low (0.5), reflecting the poor recall.  The overall weighted average F1-score (0.73) is influenced by the larger support for class 1, hence masking the true performance issues. This success status is also misleading in light of the imbalanced performance and poor compliance.</li>
+</ul>
+<p><strong>5. Explainability (XAI Insights Report):</strong></p>
+<ul>
+<li><strong>Status:</strong> SUCCESS</li>
+<li><strong>Analysis:</strong> The XAI analysis using SHAP values was successfully completed. The availability of global explanations is positive for transparency and interpretability.  However, the report doesn't provide the actual SHAP values or insights; only the existence of a summary plot is indicated.  Analyzing this plot is essential to understand the feature importance and identify potential sources of bias or model limitations contributing to the poor compliance score.</li>
+</ul>
+<p><strong>6. Interplay between Model Performance and Regulatory Compliance:</strong></p>
+<p>The model's apparently acceptable accuracy (76%) is completely overshadowed by its extremely poor compliance (22%). This discrepancy suggests a fundamental mismatch between the model's performance metrics and the regulatory requirements.  The model might be accurately classifying examples within its training data, but this data itself is not representative or compliant with the regulatory standards of the <code>cpcb_standards</code> agency.  This could be due to several reasons: biased or incomplete training data, incorrect feature engineering, or inappropriate model choice.  The high recall for class 1, coupled with low recall for class 0, also suggests possible skewed data representation in the training set.</p>
+<p><strong>7. Key Risks:</strong></p>
+<ol>
+<li><strong>Non-Compliance:</strong> The most significant risk is the model's failure to meet regulatory compliance standards, potentially leading to legal and financial penalties.</li>
+<li><strong>Bias and Inaccuracy:</strong>  The model demonstrates bias and low recall for a critical class, resulting in inaccurate predictions and unreliable pollution level assessments.</li>
+<li><strong>Lack of Transparency:</strong> While XAI was employed, the provided report doesn't offer detailed insights from the SHAP analysis, limiting the understanding of the model's decision-making process and hindering efforts for remediation.</li>
+<li><strong>Data Quality Issues:</strong>  The poor compliance score strongly suggests underlying problems in the data quality, possibly stemming from incomplete or inaccurate data collection.</li>
+</ol>
+<p><strong>8. Actionable Recommendations:</strong></p>
+<ol>
+<li><strong>Investigate Compliance Failure:</strong> Conduct a thorough investigation into why the model fails to comply with the <code>cpcb_standards</code>. This should include a detailed analysis of the data used for training and testing.</li>
+<li><strong>Re-evaluate Data Quality:</strong>  Assess the data for biases, missing values, and inconsistencies. Consider data augmentation techniques or collecting more representative data to address the class imbalance and improve the overall data quality.</li>
+<li><strong>Analyze SHAP Explanations:</strong>  Thoroughly examine the SHAP summary plot and individual SHAP values to understand feature importance and identify potential sources of bias.</li>
+<li><strong>Re-train the Model:</strong> Retrain the model using improved data, potentially exploring different model architectures or hyperparameter tuning to address the class imbalance and improve performance, especially for class "0".</li>
+<li><strong>Enhance Monitoring and Evaluation:</strong> Establish a robust system for continuous monitoring and evaluation of the model's performance and compliance to catch issues early.  Regular audits should be scheduled.</li>
+<li><strong>Clarify Compliance Report Success Status:</strong> Investigate why the <code>Compliance Report</code> shows "SUCCESS" despite the extremely low compliance score of 22%.  This is a critical anomaly that must be addressed immediately.</li>
+<li><strong>Document All Findings and Remediation Steps:</strong>  Maintain thorough documentation of all findings, remediation steps, and evaluations to ensure accountability and transparency.</li>
+</ol>
+<p>This comprehensive analysis highlights the serious issues in the audited AI system.  Addressing these recommendations is crucial to ensure the model's accuracy, fairness, and regulatory compliance. Ignoring these risks could lead to significant legal, ethical, and financial consequences.</p></p>
+        </div>
+      </div>
+
+      <!-- NEW SECTION for Model Performance -->
+      <div class="section">
+        <h2>Model Performance Evaluation</h2>
+        <table>
+          <tr>
+            <th>Model Accuracy</th>
+            <td>
+              76.00%
+            </td>
+          </tr>
+        </table>
+        <h3>Classification Report</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Precision</th>
+              <th>Recall</th>
+              <th>F1-Score</th>
+              <th>Support</th>
+            </tr>
+          </thead>
+          <tbody>
+             
+            <tr>
+              <td>0</td>
+              <td>0.86</td>
+              <td>0.35</td>
+              <td>0.50</td>
+              <td>17.0</td>
+            </tr>
+              
+            <tr>
+              <td>1</td>
+              <td>0.74</td>
+              <td>0.97</td>
+              <td>0.84</td>
+              <td>33.0</td>
+            </tr>
+                
+            <tr>
+              <td>macro avg</td>
+              <td>0.80</td>
+              <td>0.66</td>
+              <td>0.67</td>
+              <td>50.0</td>
+            </tr>
+              
+            <tr>
+              <td>weighted avg</td>
+              <td>0.78</td>
+              <td>0.76</td>
+              <td>0.73</td>
+              <td>50.0</td>
+            </tr>
+             
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>Compliance Verdict</h2>
+        <table>
+          <tr>
+            <th>Feature Compliance Score (40%)</th>
+            <td>
+              25.00%
+            </td>
+          </tr>
+          <tr>
+            <th>Threshold Accuracy Score (30%)</th>
+            <td>
+              22.00%
+            </td>
+          </tr>
+          <tr>
+            <th>XAI Trust Score (20%)</th>
+            <td>
+              85.00%
+            </td>
+          </tr>
+          <tr>
+            <th>Performance Metrics (10%)</th>
+            <td>
+              76.00%
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>Risk Summary</h2>
+        <p>Distribution of data points across compliance categories:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Very Poor</td>
+              <td>19</td>
+            </tr>
+            
+            <tr>
+              <td>Poor</td>
+              <td>7</td>
+            </tr>
+            
+            <tr>
+              <td>Severe</td>
+              <td>7</td>
+            </tr>
+            
+            <tr>
+              <td>Satisfactory</td>
+              <td>6</td>
+            </tr>
+            
+            <tr>
+              <td>Moderate</td>
+              <td>6</td>
+            </tr>
+            
+            <tr>
+              <td>Good</td>
+              <td>5</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>Explainability Visuals</h2>
+        <h3>Global Feature Importance (SHAP)</h3>
+        <p>
+          This chart shows which pollutants had the most impact on the model's
+          predictions. Longer bars indicate higher importance.
+        </p>
+        <div class="img-container">
+          <img
+            src="data:image/png;base64,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AAAAOCGoAAAAAOCEoAIAAACAE4IKAAAAAE4IKgAAAAA4IagAAAAA4ISgAgAAAIATggoAAAAATggqEOqmndcV9i4AAACgiCCoAAAAAOCEoAIAAACAE4IKAAAAAE4IKgAAAAA4IagAAAAA4ISgAgAAAIATggoAAAAATggqAAAAADghqAAAAADghKACAAAAgJNSia7YsmXLhDf6/vvvm9q1a+d1n4qd77//3syaNctcfPHFnBcAAACkb1Dx2GOPRf37m2++MZMmTTK9evUyzZo1i/pb1apVk7eHxcAPP/xgXnrpJdOiRQuCCgAAAKRvUHHRRRdF/fvw4cM2qGjatGmWvxVnu3fvNuXLlzepJBX3CQAAAOkj4aAiUZ7nmYkTJ5rJkyeblStXmhIlSpjGjRubfv36RXWhWr9+vbnkkkvs8pNPPtmMHTvWrF692tSoUcNcd9119m8bN240w4cPNwsWLDCHDh0ynTt3Nvfdd1/UA/Qjjzxipk6daj799FMzYsQIM3v2bLN//37TpEkTM2DAANOoUaMs+/jJJ5+YCRMmmB9//NEGRw0aNDDXXHONOffcc6PW0/726NHDBk0vvviibXE47bTTzOjRo83mzZvN+PHjzfz5882GDRvsdx5//PGme/fudlslS5a029Dn1EohN998c2Tb2q723f97WJcxdZeqVauW/b5E9kmWLl1qxowZY1uS9uzZYz+vferTp48pVSrpyQ0AAAAkP6h4+OGHzfTp081vfvMb+1B88OBBM23aNHPrrbeaJ5980gYGQf/5z3/Me++9Z6644gpTqVIlM2XKFNvVqnTp0mbUqFGmVatWpn///vZhWQ/eZcqUMYMHD87yvbfffrv9vIKULVu2mLffftvceOON9gFbQYPvH//4h13Wvn17+5CvoGfmzJk2WLn33nvN7373u6jt6ntnzJhhevbsaR/mfQpI9LlzzjnH1KlTxwY9c+bMMSNHjjTr1q0zDz74oF2va9eu5tdff7WtOn379jUnnXSSXa7P5FW8fdK5vOeee0zdunVN79697flYvHhxJPj429/+lufvBAAAAOLy8uj999/3WrRoYX/7ZsyYYZdNnDgxat2DBw96vXv39i6++GLvyJEjdtm6devsuh06dPDWr18fWXfr1q1eu3btvJYtW3rjxo2L2s6gQYO8Nm3aeLt3744sGzJkiN2O/uZv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S1W0rk/zVitDaj7z4PZ//PFHs2bNmsgyfd+OHTui1kPxSvcw06dPt78bN26clGNAwaV7brZPeU+/dA9DeS+6aa4XnD344IOmZ8+e5oYbboi7fcp6+qV7sso6YyqKqcsvv9y+2OTuu+821113nX1RikbyX3bZZXaAju+WW24xGzZsMJMnT7b/1gCdvn372n53mnKsQYMG9iVouqD07t078jlNPTp27Fhz7733mltvvdXOEKDBPB07dqSfbTFO98GDB9sX4anvpT+Y64033jDnnHMODxlFMN1l6dKlZv369falSKL+s6J80KJFC/v/lPf0THfKe/FJcw24HTRokKlbt66d2Wfx4sWRdZXm/gtOKevpme6Dk1TWM/SyiqQeOVKGMpPevLhw4UJbC929e/csr3S/8cYbbQb84IMPIsuUJV555RXz7rvvmm3btpmGDRuagQMH2trsIGVqbV+vfy9ZsqR9p4HW0ywCKJ7prpvNtGnT7DSzGoNRu3Ztc8EFF9iAJLh9FJ10f+SRR8zUqVOzbE+zgCjI9FHe0y/dKe/FJ831+9FHHw3dXo8ePWx+8FHW0y/dxyaprBNUAAAAAHDCmAoAAAAATggqAAAAADghqAAAAADghKACAAAAgBOCCgAAAABOCCoAAAAAOCGoAAAAAOCEoAIAAACAE4IKwIHePFq5cmXz0ksvRS3/4x//aE488cRC26/iQG/6zMjIMKtWrSqQ79PbxGO/b+/evfbNovHeSJqXvAH3NJo1a1Zh7wqK+PWBvJS+lGeU9sG3iBeEWbNm2e9V3suLb7/91pQoUcJ88cUXJlURVAAOHnroIVOjRg37KvtEbNy40QwaNMicccYZpmLFiqZSpUrmlFNOMVdeeaV57733otY955xzTIUKFXK8qS5YsCD079u2bTNHHXWUXWfcuHFxt6PgR+v4P2XKlLHLbrjhBrN27VqTznT+7rvvPvPUU0+ZDRs25GveQHrTA4PKdEEF0Sh8SmuludK+IJHXstq+fbs9J6kcZJ511lmmZ8+e5u677zae55lURFAB5NEvv/xixowZY26//XZTqlSpHNdfvXq1OfPMM82oUaNM27ZtzRNPPGGGDh1qevToYZYvX27Gjh2b1P17/fXXzf79+81JJ51k9zM7derUsYGHfp555hnTpk0b+xn9/vXXX006u/76622wNXz48HzLG0jMNddcY1uPOnXqZIobPeipRYwHvfShtFaaF0ZQkc55rV69evY6ooqfYFChc5LKQYXceeed5uuvvzYfffSRSUXc7YA8evHFF+3D5h/+8IeE1h82bJjtEjN58mRz6aWXhrZiJNM///lP06VLF/tduhCtWLHCnHzyyaHrqptO7969I/++5ZZbzLHHHmtGjhxpg5177rnHpKvy5cubyy67zDZZP/7446Zs2bJJzxuF7fDhwzYAPfroo00qK1mypP0BgLzStblcuXKmKDr77LNtT4IXXnjBdO/e3aQaWipQYPw+rJ9//rl57LHHbG2BupeoNnzu3Ll2HfUV7Nixo32Qq1Wrlvnzn/8cui11+enVq5epXr26fcg79dRTzV/+8hdz6NChqPW++uorO76hYcOG9oFJXY46dOhgJk2alGWbWk/7t2PHjshDtS48Wn/evHlZ1n/nnXdMy5Yt7XqJ+PHHH+3v3/zmN6F/r1mzpkmW//73v7Y2qk+fPuaqq66yteU5tVbEOv/88+3vn376Ke4606ZNs+fs2WefDf17u3btbBeggwcP5jo9wvhpFEbL9fdYEyZMsHlK36XvVH579913TW5ceOGFtsVm5syZCa0fL28cOXLE5lPVtCu91dXshBNOsPlty5YtUbVmynsKZsLcf//99niDNZzKt3/6059MgwYNbJnQeVdQo2AyrBx+9tlntnzVr1/fftfbb79t//7JJ5+Y3//+9zYAVfmsUqWK6datW9x+vBMnTrQtcNqGjkW1fdp2WN9hBS5//etfzemnn27X17Yvvvhi88033+S5H3yyriu6UavLocpO165dbdfDY445xpYhVQYE7dq1y9Zy6jv8a5DOu7rK7dmzJ8u21VVBY2u0vrarnyZNmpiHH37Y/l3dLvxucqoI8LsihuXnWIsWLbLXwmrVqtlz2rhxY/Pkk0/aQNHl+pZdl8ulS5faigqdS5UpXdO+//57u466cTZv3tymgc7p6NGjQ7f18ssvR9ZTpYby2H/+858s66nMqEVXLa7aX3UdVStsPOqmqONTXlT50pioG2+8MUsa5lai51l5KGw8XWw/fuVbpbUo7f001+dj+98/99xz9pqp79Vv/Tte/s2pH39e85qff3Sd0v8r3+uaqu44foWY0vq0006z+9moUSMzZcqULNv5xz/+YdP6+OOPt+mjPKQKrbBWE51blVWV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"
+            alt="SHAP Summary Plot"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
